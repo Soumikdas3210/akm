@@ -1,0 +1,71 @@
+# Formal key-isolation setup (Decision 2, second layer).
+# UNTESTED in the authoring sandbox (no Docker there) — run the probes below on your machine.
+#
+# Usage:
+#   export RUN=$PWD/runs/iso       # a finished run directory (build one with akm.pipeline)
+#   docker compose build
+#   docker compose run --rm v0-structural akm.isolation_probe --docker --role structural --run /data
+#   docker compose run --rm v2-key        akm.isolation_probe --docker --role v2-key --run /data
+#   ...each must print leaks=0 and exit 0.
+#
+# Each service mounts ONLY the files its rung is allowed to hold, read-only.
+# Files that are not mounted do not exist inside the container at all.
+
+x-struct-mounts: &struct
+  - ${RUN}/store/payload.db:/data/store/payload.db:ro
+  - ${RUN}/store/wraps.db:/data/store/wraps.db:ro
+  - ${RUN}/receipts.bin:/data/receipts.bin:ro
+  - ${RUN}/bundle.json:/data/bundle.json:ro
+  - ${RUN}/inventory.json:/data/inventory.json:ro
+  - ${RUN}/inventory_ids.bin:/data/inventory_ids.bin:ro
+  - ${RUN}/pub:/data/pub:ro
+  - ${RUN}/run_config.json:/data/run_config.json:ro
+
+services:
+  v0-structural:            # V0: no keys at all
+    build: .
+    network_mode: none
+    volumes: *struct
+
+  v1:                       # V1: no keys; the stored tree answers challenges
+    build: .
+    network_mode: none
+    volumes:
+      - ${RUN}/store/payload.db:/data/store/payload.db:ro
+      - ${RUN}/store/wraps.db:/data/store/wraps.db:ro
+      - ${RUN}/receipts.bin:/data/receipts.bin:ro
+      - ${RUN}/bundle.json:/data/bundle.json:ro
+      - ${RUN}/inventory.json:/data/inventory.json:ro
+      - ${RUN}/inventory_ids.bin:/data/inventory_ids.bin:ro
+      - ${RUN}/pub:/data/pub:ro
+      - ${RUN}/run_config.json:/data/run_config.json:ro
+      - ${RUN}/merkle_nodes.bin:/data/merkle_nodes.bin:ro
+
+  v2minus-key:              # V2-minus key layer: wraps.db + both KEKs. NEVER payload.db
+    build: .
+    network_mode: none
+    volumes:
+      - ${RUN}/store/wraps.db:/data/store/wraps.db:ro
+      - ${RUN}/keys/v2minus:/data/keys/v2minus:ro
+
+  v2-key:                   # V2 key layer: wraps.db + K_new only. NEVER payload.db
+    build: .
+    network_mode: none
+    volumes:
+      - ${RUN}/store/wraps.db:/data/store/wraps.db:ro
+      - ${RUN}/keys/v2:/data/keys/v2:ro
+
+  v3:                       # oracle: everything except the answer key
+    build: .
+    network_mode: none
+    volumes:
+      - ${RUN}/store/payload.db:/data/store/payload.db:ro
+      - ${RUN}/store/wraps.db:/data/store/wraps.db:ro
+      - ${RUN}/receipts.bin:/data/receipts.bin:ro
+      - ${RUN}/bundle.json:/data/bundle.json:ro
+      - ${RUN}/inventory.json:/data/inventory.json:ro
+      - ${RUN}/inventory_ids.bin:/data/inventory_ids.bin:ro
+      - ${RUN}/pub:/data/pub:ro
+      - ${RUN}/run_config.json:/data/run_config.json:ro
+      - ${RUN}/corpus.db:/data/corpus.db:ro
+      - ${RUN}/keys/v3:/data/keys/v3:ro

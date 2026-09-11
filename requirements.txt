@@ -1,0 +1,5 @@
+# Pinned so every team member (and the released artifact) uses identical versions.
+# Record these in the paper's Experimental Setup section.
+cryptography==46.0.6
+psutil==7.2.2
+pytest==9.1.1

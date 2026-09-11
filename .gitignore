@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Experiment outputs: large, regenerable from seeds. Never commit these.
+runs/
+*.db
+*.db-journal
+keys/
+
+# Editor / OS
+.vscode/
+.DS_Store
+
+# Experiment scratch space (big, deleted automatically after each seed).
+# results/*/scores.csv, audit/ and environment.json ARE committed: they are the evidence.
+results/*/work/
