@@ -1,0 +1,21 @@
+{
+  "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+  "code_commit": "da85c397c23061915f050f386d52a07a5edbfa35",
+  "code_dirty": false,
+  "smoke": false,
+  "python": "3.12.3",
+  "cryptography": "46.0.6",
+  "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "AMD Ryzen 7 7435HS",
+  "experiment": "rq4",
+  "args": {
+    "out": "results/rq4",
+    "corpora": 50,
+    "beacons": 20,
+    "N": 10000,
+    "size": 200,
+    "fsync": "group:1000",
+    "smoke": false
+  },
+  "started": "2026-09-12 07:49:57"
+}
