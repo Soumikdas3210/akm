@@ -1,0 +1,31 @@
+{
+  "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+  "code_commit": "263f61b85897c1ef4f1a89d1d829cd7db074021b",
+  "code_dirty": false,
+  "smoke": false,
+  "python": "3.12.3",
+  "cryptography": "46.0.6",
+  "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "AMD Ryzen 7 7435HS",
+  "experiment": "e2",
+  "args": {
+    "out": "results/e2",
+    "Ns": [
+      1000,
+      10000
+    ],
+    "sizes": [
+      200,
+      2048
+    ],
+    "reps": 3,
+    "include_1m": false,
+    "per_record_1m": false,
+    "smoke": false
+  },
+  "started": "2026-09-12 12:45:24",
+  "disk": {
+    "mount": "/dev/sdd ext4",
+    "rotational": true
+  }
+}
