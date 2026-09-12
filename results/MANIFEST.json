@@ -1,0 +1,67 @@
+{
+  "frozen_at": "2026-09-12 18:20:29 +0600",
+  "code_commit": "760569aeafc6c49375580e875b5756095b06f3f9",
+  "code_dirty": false,
+  "prereg_history": [
+    "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2 2026-09-11 19:09:43 +0600"
+  ],
+  "experiments": {
+    "e1": {
+      "code_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+      "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+      "smoke": false
+    },
+    "e2": {
+      "code_commit": "263f61b85897c1ef4f1a89d1d829cd7db074021b",
+      "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+      "smoke": false
+    },
+    "rq4": {
+      "code_commit": "da85c397c23061915f050f386d52a07a5edbfa35",
+      "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+      "smoke": false
+    }
+  },
+  "warnings": [
+    "e1 was produced by commit 2adc7f5ff0, freezing at 760569aeaf: state in the paper whether the code changed in between",
+    "e2 was produced by commit 263f61b858, freezing at 760569aeaf: state in the paper whether the code changed in between",
+    "rq4 was produced by commit da85c397c2, freezing at 760569aeaf: state in the paper whether the code changed in between"
+  ],
+  "files": {
+    "REPORT.md": "64d373a44167aeebe5d360b6419bdd0a0a01f654baa7a6b50c6f246841e13e83",
+    "e1/environment.json": "69b80bb4204e3f1277c8c7bbde1ab9140396750d810c31af24966e34215d5018",
+    "e1/scores.csv": "25a6001346fcadd4126580f47e6458a3c275252c0dd2a0cf8bb65fecf5c6d806",
+    "e1.log": "861ec56a94a9d9b33090cd84e7c89a3784349a0140056bbf71d54dabe90aa211",
+    "e2/environment.json": "4b563ed07ae03e85e89c619ad96a4f671d920c9096194c1c96c6e5beb38c3091",
+    "e2/storage.csv": "80c053cfa1ae8855d9a8514676b4538cbd607f34a415f2474986be07c8941e63",
+    "e2/timings.csv": "4b8e394d7283d8e74aa4a5f68d50e6d1e93d18fd0261e6610e9adc201c77e85a",
+    "e2.log": "faf90ca87e444fa167ef927ad6d1c21563fdfcf8284d2c83436bd1f3116cee29",
+    "paper/main.tex": "dcc20f96332e9cfcba78ebe56c66b568806adf93e58869d3a8e28f90e21ce5cb",
+    "paper/numbers.tex": "c63d5d96b9b92030887dc124cf6e8b6fa40f3edd783978ffe6c23deb832b097a",
+    "paper/results.tex": "2cff2fd2445908ed3de2ccc4d5055d011a425ce57e4057645c4eb1c16f159444",
+    "paper/setup.tex": "02c37fdaab891a107f4bc07c1bc973bd7fc1f6af11c07e56252394b0b14ec46f",
+    "paper/tables/T1_detection.tex": "40d2a1f17ffef34df664f18d2dae52de7d5a589d05d2e23a441f0b511df3334e",
+    "paper/tables/T2_rq4.tex": "7d8475ecfd18efd6855367c7f146bfb6b1c1f3a66103a259c85b72452cf004b6",
+    "paper/tables/T3_cost.tex": "2b554433a8ec0b8a8ae4b4dc590f616449caa22b0f30babcfb023b35b00cf9e6",
+    "paper/tables/T4_p4.tex": "07cc5cc64b5b91490a800b72fe827006730eed898deec97f12791f5a47e657a8",
+    "paper/tables/T5_storage.tex": "c4bc1611fcb4638e11a5865c6a0d82bb4c1ba81b62c2805a71ab22602b51306f",
+    "paper/tables/T6_setup.tex": "69ae9c6b894edd260b59af26962cce5b2d7ac6046f4f772e439afcee63a393bb",
+    "paper/threats.tex": "77fc7c377397b2539c42dfcf830e9adcab766c55d432f3f9b1efe861b9de1007",
+    "paper.zip": "09cf09d7c3e28bd342482dcc163195e994888e6ca22e1917f26b52111adc9356",
+    "rq4/environment.json": "2992e4adc89ae488116231d1a64f1f92ee7a0904438d7f96d084f143902a8cd4",
+    "rq4/scores.csv": "670254f0aea8f85974fe3b1935eaa87813d591f9b1d5e26cbd5e406833bd2574",
+    "rq4.log": "6fa1228f070f87d9c6c54e2f7c26852a07e82859d01b18a4591ffe742f3db86f",
+    "tables/T1_detection.tex": "40d2a1f17ffef34df664f18d2dae52de7d5a589d05d2e23a441f0b511df3334e",
+    "tables/T2_rq4.tex": "7d8475ecfd18efd6855367c7f146bfb6b1c1f3a66103a259c85b72452cf004b6",
+    "tables/T3_cost.tex": "2b554433a8ec0b8a8ae4b4dc590f616449caa22b0f30babcfb023b35b00cf9e6",
+    "tables/T4_p4.tex": "07cc5cc64b5b91490a800b72fe827006730eed898deec97f12791f5a47e657a8",
+    "tables/T5_storage.tex": "c4bc1611fcb4638e11a5865c6a0d82bb4c1ba81b62c2805a71ab22602b51306f",
+    "tables/T6_setup.tex": "69ae9c6b894edd260b59af26962cce5b2d7ac6046f4f772e439afcee63a393bb"
+  },
+  "audit_trees": {
+    "e1/audit": {
+      "files": 8100,
+      "sha256": "365cfd7844c2d12e6fb569eacb44332dc1c2585112fd3ff37610a77c8f90027f"
+    }
+  }
+}

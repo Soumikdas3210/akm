@@ -1,0 +1,31 @@
+\begin{table}[t]
+  \centering
+  \caption{Experiment 2: migration wall-clock seconds, median (IQR) over the measured reps.}
+  \label{tab:e2time}
+  \begin{tabular}{rrrrrr}
+    \toprule
+    $N$ & B & no proof, rec. & proof, rec. & no proof, group & proof, group \\
+    \midrule
+    1{,}000 & 200 & 20.176 (0.249) & 25.245 (2.082) & 0.264 (0.007) & 0.296 (0.005) \\
+    1{,}000 & 2048 & 22.916 (2.605) & 34.218 (1.243) & 0.277 (0.007) & 0.319 (0.008) \\
+    10{,}000 & 200 & 266.141 (5.571) & 345.348 (3.224) & 2.969 (0.030) & 3.106 (0.039) \\
+    10{,}000 & 2048 & 287.831 (0.271) & 355.838 (3.652) & 3.029 (0.068) & 3.135 (0.064) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Experiment 2: verification wall-clock seconds, median (IQR).}
+  \label{tab:e2verify}
+  \begin{tabular}{rrrrrr}
+    \toprule
+    $N$ & B & V0 & V1-S & V2$^{-}$ & V2 \\
+    \midrule
+    1{,}000 & 200 & 0.058 (0.002) & 0.020 (0.001) & 0.150 (0.003) & 0.106 (0.001) \\
+    1{,}000 & 2048 & 0.067 (0.001) & 0.021 (0.003) & 0.151 (0.003) & 0.113 (0.001) \\
+    10{,}000 & 200 & 0.544 (0.004) & 0.062 (0.001) & 1.367 (0.011) & 0.967 (0.004) \\
+    10{,}000 & 2048 & 0.587 (0.019) & 0.058 (0.002) & 1.390 (0.017) & 1.019 (0.016) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
