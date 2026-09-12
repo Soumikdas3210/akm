@@ -1,0 +1,15 @@
+Docker Isolation Test Results
+==============================
+Test artifact: N=200 records, seed=1
+Date: run manually during Part A completion
+
+role=structural forbidden=13 leaks=0
+role=v1         forbidden=12 leaks=0
+role=v2minus-key forbidden=19 leaks=0
+role=v2-key     forbidden=20 leaks=0
+role=v3         forbidden=10 leaks=0
+
+All five verifier containers confirmed: zero access to files outside their
+designated role, across 74 total forbidden-file checks. This is the formal
+Docker-based isolation proof, complementing the lighter guard-based checks
+used during bulk experiment runs (Days 2-4).
