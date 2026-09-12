@@ -1,0 +1,22 @@
+{
+  "prereg_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+  "code_commit": "2adc7f5ff0d719628ead25963d18e2f8da8eb1b2",
+  "code_dirty": false,
+  "smoke": false,
+  "python": "3.12.3",
+  "cryptography": "46.0.6",
+  "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "AMD Ryzen 7 7435HS",
+  "experiment": "e1",
+  "args": {
+    "seeds": "1-100",
+    "out": "results/e1",
+    "N": 10000,
+    "size": 2048,
+    "tau": 128,
+    "k": 100,
+    "fsync": "group:1000",
+    "smoke": false
+  },
+  "started": "2026-09-11 20:01:05"
+}
